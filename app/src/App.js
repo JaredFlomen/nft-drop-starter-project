@@ -9,7 +9,6 @@ const App = () => {
   const checkIfWalletIsConnected = async () => {
     try {
       const { solana } = window;
-
       if (solana) {
         if (solana.isPhantom) {
           console.log('Phantom wallet found!');
@@ -52,7 +51,6 @@ const App = () => {
         <div className="header-container">
           <p className="header">🍭 Candy Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
-          {/* Render your connect to wallet button right here */}
           {renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
