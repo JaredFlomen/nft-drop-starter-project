@@ -27,6 +27,17 @@ const App = () => {
     }
   };
 
+  const connectWallet = async () => { };
+
+  const renderNotConnectedContainer = () => (
+    <button
+      className="cta-button connect-wallet-button"
+      onClick={connectWallet}
+    >
+      Connect to Wallet
+    </button>
+  );
+
   useEffect(() => {
     const onLoad = async () => {
       await checkIfWalletIsConnected();
@@ -41,6 +52,8 @@ const App = () => {
         <div className="header-container">
           <p className="header">🍭 Candy Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
+          {/* Render your connect to wallet button right here */}
+          {renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
